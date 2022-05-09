@@ -7,40 +7,41 @@
     <title>Document</title>
 </head>
 <body>
-    <form>
+    <form id="form">
         <p>Piscine semi-enterrée ou hors-sol</p>
 
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-            <label class="form-check-label" for="exampleRadios1">
+            <input type="radio" name="exampleRadios" id="semiEnterre" value="option1" checked>
+            <label for="semiEnterre">
                 Semi-enterrée
             </label>
         </div>
         
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-            <label class="form-check-label" for="exampleRadios2">
+            <input type="radio" name="exampleRadios" id="horsSol" value="option2">
+            <label class="form-check-label" for="horsSol">
                 Hors-sol
             </label>
         </div>
 
         <p class="mb-3">Piscine enterrée</p>
-        <div class="col-md-2 mb-3">
-            <label for="length">Longueur</label>
-            <input type="number" class="form-control" id="length" placeholder="" required autoComplete="nope">
+        <div>
+            <label for="longueur">Longueur</label>
+            <input type="number" id="longueur" placeholder="" required autoComplete="nope" value="">
         </div><br>
 
-        <div class="col-md-2 mb-3">
-            <label for="width">Largeur</label>
-            <input type="number" class="form-control" id="width" placeholder="" required autoComplete="nope">
+        <div>
+            <label for="largeur">Largeur</label>
+            <input type="number" id="largeur" placeholder="" required autoComplete="nope" value="">
         </div><br>
 
-        <div class="col-md-2 mb-3">
-            <label for="height">Hauteur</label>
-            <input type="number" class="form-control" id="height" placeholder="" required autoComplete="nope">
+        <div>
+            <label for="hauteur">Hauteur</label>
+            <input type="number" id="hauteur" placeholder="" required autoComplete="nope" value="">
         </div><br>
-        <button class="btn" type="submit">Valider</button>
+        <button type="submit">Valider</button>
     </form>
-    
+
+    <script src="index.js"></script>
 </body>
 </html>
