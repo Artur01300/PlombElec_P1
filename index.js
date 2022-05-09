@@ -6,7 +6,7 @@ const hauteur = document.getElementById('hauteur');
 
 
 form.addEventListener('submit', (e)=>{
-    e.preventDefault()
+    e.preventDefault();
 
     const radioButtons = document.querySelectorAll('input[name="geographie"]');
     let metrCube = longueur.value * largeur.value * hauteur.value;
@@ -17,14 +17,18 @@ form.addEventListener('submit', (e)=>{
             break;
         }
     }
+    let result = 0;
     if(selectegeographie == "option1"){
-        console.log(metrCube + (metrCube * 0.20))
-
+        result = metrCube + (metrCube * 0.20)
     }
 
     else if(selectegeographie == "option2"){
-        console.log(metrCube + (metrCube * 0.25));
+        result = metrCube + (metrCube * 0.25);
     }
 
-})
+    const divResult = document.getElementById('result');
+    let newP = document.createElement('p');
+    divResult.appendChild(newP);
+    newP.innerHTML = result
+});
 
