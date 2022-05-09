@@ -8,19 +8,19 @@
 </head>
 <body>
     <form id="form">
-        <p>Piscine semi-enterrée ou hors-sol</p>
+        <p>L'EMPLACEMENT DE VOTRE PISCINE</p>
 
-        <div class="form-check">
-            <input type="radio" name="exampleRadios" id="semiEnterre" value="option1" checked>
-            <label for="semiEnterre">
-                Semi-enterrée
+        <div>
+            <input type="radio" name="geographie" id="semiEtHors" value="option1" required>
+            <label for="semiEtHors">
+                Piscine semi-enterrée ou hors-sol
             </label>
         </div>
         
-        <div class="form-check">
-            <input type="radio" name="exampleRadios" id="horsSol" value="option2">
-            <label class="form-check-label" for="horsSol">
-                Hors-sol
+        <div>
+            <input type="radio" name="geographie" id="sudFrance" value="option2" required>
+            <label class="form-check-label" for="sudFrance">
+                Centre, nord de la France, ou en altitude
             </label>
         </div>
 
@@ -41,6 +41,9 @@
         </div><br>
         <button type="submit">Valider</button>
     </form>
+
+    <h1>Résultat</h1>
+    <div id="result"></div>
 
     <script src="index.js"></script>
 </body>
