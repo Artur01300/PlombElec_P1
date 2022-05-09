@@ -29,6 +29,7 @@ form.addEventListener('submit', (e)=>{
     const divResult = document.getElementById('result');
     let newP = document.createElement('p');
     divResult.appendChild(newP);
-    newP.innerHTML = result
+    console.log(result)
+    newP.innerHTML = `Il vous faut une pompe à chaleur pouvant chauffer une piscine ayant un volume de <strong> ${result}</strong> m³.`
 });
 
