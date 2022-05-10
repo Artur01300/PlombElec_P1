@@ -8,23 +8,40 @@
 </head>
 <body>
     <form id="form">
-        <p>L'EMPLACEMENT DE VOTRE PISCINE</p>
+        <h2>L'EMPLACEMENT DE VOTRE PISCINE</h2>
 
-        <div>
-            <input type="radio" name="geographie" id="semiEtHors" value="option1" required>
-            <label for="semiEtHors">
-                Piscine semi-enterrée ou hors-sol
-            </label>
-        </div>
-        
-        <div>
-            <input type="radio" name="geographie" id="sudFrance" value="option2" required>
-            <label class="form-check-label" for="sudFrance">
-                Centre, nord de la France, ou en altitude
-            </label>
+        <div id="radio2"></div>
+
+        <div id="radio1">
+            <div>
+                <input type="radio" name="geographie" id="semiEtHors" value="option1">
+                <label for="semiEtHors">
+                    Piscine enterrée
+                </label>
+            </div>
+    
+            <div> 
+                <input type="radio" name="geographie" id="semiEtHors" value="option2">
+                <label for="semiEtHors">
+                    Piscine semi-enterrée ou hors-sol
+                </label>
+            </div>
+    
+            <div>
+                <input type="radio" name="geographie" id="sudFrance" value="option3">
+                <label class="form-check-label" for="sudFrance">
+                   Moitié sud de la France
+                </label>
+            </div>
+            
+            <div>
+                <input type="radio" name="geographie" id="sudFrance" value="option4">
+                <label class="form-check-label" for="sudFrance">
+                    Centre, nord de la France, ou en altitude
+                </label>
+            </div>    
         </div>
 
-        <p class="mb-3">Piscine enterrée</p>
         <div>
             <label for="longueur">Longueur</label>
             <input type="number" id="longueur" placeholder="" required autoComplete="nope" value="">
@@ -44,6 +61,14 @@
 
     <h1>Résultat</h1>
     <div id="result"></div>
+
+    <h2 id="cumule2Facteurs">Ou cumulez 2 facteurs si nécessaire</h2>
+    <style>
+        #cumule2Facteurs:hover{
+            color: red;
+            cursor: pointer;
+        }
+    </style>
 
     <script src="index.js"></script>
 </body>
