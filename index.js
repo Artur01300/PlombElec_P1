@@ -93,8 +93,14 @@ form.addEventListener('submit', (e)=>{
     }
 
     const divResult = document.getElementById('result');
+  
     let newP = document.createElement('p');
     divResult.appendChild(newP);
     let resultRound = Math.round(result);
-    newP.innerHTML = `<strong>Resultat :</strong>  Il vous faut une pompe à chaleur pouvant chauffer une piscine ayant un volume de <strong> ${resultRound}</strong> m³.`
+    newP.innerHTML = `
+    <strong>Resultat :</strong>  Il vous faut une pompe à chaleur pouvant chauffer une piscine ayant un volume de <strong> ${resultRound}</strong> m³.
+    <p>
+        <a href="https://www.plombelecdistribution.com/">Voir les produits</a>
+    </p>
+        `
 });
