@@ -4,6 +4,9 @@ const longueur = document.getElementById('longueur');
 const largeur = document.getElementById('largeur');
 const hauteur = document.getElementById('hauteur');
 const selectOpts = document.getElementById('selectOpts');
+const alditude = document.getElementById('alditude');
+// console.log(alditude.value)
+
 
 form.addEventListener('submit', (e)=>{
     e.preventDefault();
@@ -18,38 +21,77 @@ form.addEventListener('submit', (e)=>{
         }
     }
     let result = 0;
-    //Moitié sud de la France
-    if(selectOpts.value === "Moitié sud de la France" && selectegeographie == "option1"){
-        result = metrCube;
-    }
-    else if(selectOpts.value === "Moitié sud de la France" && selectegeographie == "option2"){
-        result = metrCube + (metrCube * 0.20);
-    }
-    else if(selectOpts.value === "Moitié sud de la France" && selectegeographie == "option3"){
-        result = metrCube + (metrCube * 0.20);
-    }
 
 
-    //Centre de la France
-    if(selectOpts.value === "Centre de la France" && selectegeographie == "option1"){
-        result = metrCube + (metrCube * 0.25);
-    }
-    else if(selectOpts.value === "Centre de la France" && selectegeographie == "option2"){
-        result = metrCube + (metrCube * 0.20) + (metrCube * 0.25)
-    }
-    else if(selectOpts.value === "Centre de la France" && selectegeographie == "option3"){
-        result = metrCube + (metrCube * 0.20) + (metrCube * 0.25)
-    }
+    if(alditude.checked == true){
+        //Moitié sud de la France
+        if(selectOpts.value === "Moitié sud de la France" && selectegeographie == "option1"){
+            result = metrCube + (metrCube * 0.25);
+        }
+        else if(selectOpts.value === "Moitié sud de la France" && selectegeographie == "option2"){
+            result = metrCube + (metrCube * 0.20) + (metrCube * 0.25);
+        }
+        else if(selectOpts.value === "Moitié sud de la France" && selectegeographie == "option3"){
+            result = metrCube + (metrCube * 0.20) + (metrCube * 0.25);
+        }
 
-    //Nord de la France
-    if(selectOpts.value === "Nord de la France" && selectegeographie == "option1"){
-        result = metrCube + (metrCube * 0.25);
+         //Centre de la France
+         if(selectOpts.value === "Centre de la France" && selectegeographie == "option1"){
+            result = metrCube + (metrCube * 0.25) + (metrCube * 0.25);
+        }
+        else if(selectOpts.value === "Centre de la France" && selectegeographie == "option2"){
+            result = metrCube + (metrCube * 0.20) + (metrCube * 0.25) + (metrCube * 0.25);
+        }
+        else if(selectOpts.value === "Centre de la France" && selectegeographie == "option3"){
+            result = metrCube + (metrCube * 0.20) + (metrCube * 0.25) + (metrCube * 0.25);
+        }
+
+        //Nord de la France
+        if(selectOpts.value === "Nord de la France" && selectegeographie == "option1"){
+            result = metrCube + (metrCube * 0.25) + (metrCube * 0.25);
+        }
+        else if(selectOpts.value === "Nord de la France" && selectegeographie == "option2"){
+            result = metrCube + (metrCube * 0.20) + (metrCube * 0.25) + (metrCube * 0.25);
+        }
+        else if(selectOpts.value === "Nord de la France" && selectegeographie == "option3"){
+            result = metrCube + (metrCube * 0.20) + (metrCube * 0.25) + (metrCube * 0.25);
+        }
+    
     }
-    else if(selectOpts.value === "Nord de la France" && selectegeographie == "option2"){
-        result = metrCube + (metrCube * 0.20) + (metrCube * 0.25)
-    }
-    else if(selectOpts.value === "Nord de la France" && selectegeographie == "option3"){
-        result = metrCube + (metrCube * 0.20) + (metrCube * 0.25)
+    else{
+        //Moitié sud de la France
+        if(selectOpts.value === "Moitié sud de la France" && selectegeographie == "option1"){
+            result = metrCube;
+        }
+        else if(selectOpts.value === "Moitié sud de la France" && selectegeographie == "option2"){
+            result = metrCube + (metrCube * 0.20);
+        }
+        else if(selectOpts.value === "Moitié sud de la France" && selectegeographie == "option3"){
+            result = metrCube + (metrCube * 0.20);
+        }
+
+
+        //Centre de la France
+        if(selectOpts.value === "Centre de la France" && selectegeographie == "option1"){
+            result = metrCube + (metrCube * 0.25);
+        }
+        else if(selectOpts.value === "Centre de la France" && selectegeographie == "option2"){
+            result = metrCube + (metrCube * 0.20) + (metrCube * 0.25)
+        }
+        else if(selectOpts.value === "Centre de la France" && selectegeographie == "option3"){
+            result = metrCube + (metrCube * 0.20) + (metrCube * 0.25)
+        }
+
+        //Nord de la France
+        if(selectOpts.value === "Nord de la France" && selectegeographie == "option1"){
+            result = metrCube + (metrCube * 0.25);
+        }
+        else if(selectOpts.value === "Nord de la France" && selectegeographie == "option2"){
+            result = metrCube + (metrCube * 0.20) + (metrCube * 0.25)
+        }
+        else if(selectOpts.value === "Nord de la France" && selectegeographie == "option3"){
+            result = metrCube + (metrCube * 0.20) + (metrCube * 0.25)
+        }
     }
 
     const divResult = document.getElementById('result');
