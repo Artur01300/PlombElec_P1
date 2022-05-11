@@ -4,37 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <title>Document</title>
 </head>
 <body>
     <form id="form">
-        <h2>L'EMPLACEMENT DE VOTRE PISCINE</h2>
-        <h3>Type de piscine</h3>
+        <h1>Dimontionner la pompe à chaleur de votre piscine</h1><br>
+        <h2>Type de piscine</h2>
 
         <div id="radio1">
             <div>
                 <input type="radio" name="geographie" id="semiEtHors" value="option1" checked>
                 <label for="semiEtHors">
-                    Piscine enterrée
+                    Enterrée
                 </label>
             </div>
     
             <div> 
                 <input type="radio" name="geographie" id="semiEtHors" value="option2">
                 <label for="semiEtHors">
-                    Piscine semi-enterrée
+                    Semi-enterrée
                 </label>
             </div>
             <div> 
                 <input type="radio" name="geographie" id="semiEtHors" value="option3">
                 <label for="semiEtHors">
-                    Piscine hors-sol
+                    Hors-sol
                 </label>
             </div>
-            <h3>Zone Géographique</h3>
+            <h2>Zone Géographique</h2>
 
             <select id="selectOpts">
-                <option>Moitié sud de la France</option>
+                <option>Sud de la France</option>
                 <option>Centre de la France</option>
                 <option>Nord de la France</option>
             </select><br><br>
@@ -47,33 +48,25 @@
             </div>
         </div><br>
 
-        <div>
+        <h3>Dimensions piscine</h3>
+        <div class="inputs">
             <label for="longueur">Longueur</label>
             <input type="number" id="longueur" placeholder="" required autoComplete="nope" value="">
         </div><br>
 
-        <div>
+        <div class="inputs">
             <label for="largeur">Largeur</label>
             <input type="number" id="largeur" placeholder="" required autoComplete="nope" value="">
         </div><br>
 
-        <div>
+        <div class="inputs">
             <label for="hauteur">Hauteur</label>
             <input type="number" id="hauteur" placeholder="" required autoComplete="nope" value="">
         </div><br>
         <button type="submit">Valider</button>
     </form>
 
-    <h1>Résultat : </h1>
     <div id="result"></div>
-
-    <!-- <h2 id="cumule2Facteurs">Ou cumulez 2 facteurs si nécessaire</h2>
-    <style>
-        #cumule2Facteurs:hover{
-            color: red;
-            cursor: pointer;
-        }
-    </style> -->
 
     <script src="index.js"></script>
 </body>

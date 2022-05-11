@@ -5,8 +5,6 @@ const largeur = document.getElementById('largeur');
 const hauteur = document.getElementById('hauteur');
 const selectOpts = document.getElementById('selectOpts');
 const alditude = document.getElementById('alditude');
-// console.log(alditude.value)
-
 
 form.addEventListener('submit', (e)=>{
     e.preventDefault();
@@ -24,14 +22,14 @@ form.addEventListener('submit', (e)=>{
 
 
     if(alditude.checked == true){
-        //Moitié sud de la France
-        if(selectOpts.value === "Moitié sud de la France" && selectegeographie == "option1"){
+        //Sud de la France
+        if(selectOpts.value === "Sud de la France" && selectegeographie == "option1"){
             result = metrCube + (metrCube * 0.25);
         }
-        else if(selectOpts.value === "Moitié sud de la France" && selectegeographie == "option2"){
+        else if(selectOpts.value === "Sud de la France" && selectegeographie == "option2"){
             result = metrCube + (metrCube * 0.20) + (metrCube * 0.25);
         }
-        else if(selectOpts.value === "Moitié sud de la France" && selectegeographie == "option3"){
+        else if(selectOpts.value === "Sud de la France" && selectegeographie == "option3"){
             result = metrCube + (metrCube * 0.20) + (metrCube * 0.25);
         }
 
@@ -59,14 +57,14 @@ form.addEventListener('submit', (e)=>{
     
     }
     else{
-        //Moitié sud de la France
-        if(selectOpts.value === "Moitié sud de la France" && selectegeographie == "option1"){
+        //Sud de la France
+        if(selectOpts.value === "Sud de la France" && selectegeographie == "option1"){
             result = metrCube;
         }
-        else if(selectOpts.value === "Moitié sud de la France" && selectegeographie == "option2"){
+        else if(selectOpts.value === "Sud de la France" && selectegeographie == "option2"){
             result = metrCube + (metrCube * 0.20);
         }
-        else if(selectOpts.value === "Moitié sud de la France" && selectegeographie == "option3"){
+        else if(selectOpts.value === "Sud de la France" && selectegeographie == "option3"){
             result = metrCube + (metrCube * 0.20);
         }
 
@@ -98,5 +96,5 @@ form.addEventListener('submit', (e)=>{
     let newP = document.createElement('p');
     divResult.appendChild(newP);
     let resultRound = Math.round(result);
-    newP.innerHTML = `Il vous faut une pompe à chaleur pouvant chauffer une piscine ayant un volume de <strong> ${resultRound}</strong> m³.`
+    newP.innerHTML = `<strong>Resultat :</strong>  Il vous faut une pompe à chaleur pouvant chauffer une piscine ayant un volume de <strong> ${resultRound}</strong> m³.`
 });

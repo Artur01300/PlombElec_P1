@@ -1,0 +1,15 @@
+form{
+    margin: 0 auto;
+    width:30em;
+
+}
+input {
+    width: 12%;
+    border: 2px solid rgb(140, 87, 87);
+    border-radius: 4px;
+    margin-left: 20px;
+}
+
+#result{
+    text-align: center;
+}
