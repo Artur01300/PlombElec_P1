@@ -48,7 +48,7 @@ form.addEventListener('submit', (e)=>{
     else if(selectOpts.value === "Nord de la France" && selectegeographie == "option2"){
         result = metrCube + (metrCube * 0.20) + (metrCube * 0.25)
     }
-    else if(selectOpts.value === "Centre de la France" && selectegeographie == "option3"){
+    else if(selectOpts.value === "Nord de la France" && selectegeographie == "option3"){
         result = metrCube + (metrCube * 0.20) + (metrCube * 0.25)
     }
 
