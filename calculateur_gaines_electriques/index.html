@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculateur gaines électriques</title>
+    <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+</head>
+<body>
+
+    <form id="formGaines">
+        <h1>Comment bien choisir le diamètre de ses gaines électriques ?</h1><br>
+        <h2>FILS</h2>
+
+        <div id="radioGaines">
+            <div>
+                <input type="radio" name="fils" value="option1" checked>
+                <label for="semiEtHors">
+                    1 Fil
+                </label>
+            </div>
+    
+            <div> 
+                <input type="radio" name="fils" value="option2">
+                <label for="semiEtHors">
+                    2 Fils
+                </label>
+            </div>
+            <div> 
+                <input type="radio" name="fils" value="option3">
+                <label for="semiEtHors">
+                    3 Fils
+                </label>
+            </div>
+            <div> 
+                <input type="radio" name="fils" value="option4">
+                <label for="semiEtHors">
+                    4 Fils
+                </label>
+            </div>
+            <div> 
+                <input type="radio" name="fils" value="option5">
+                <label for="semiEtHors">
+                    5 Fils
+                </label>
+            </div>
+            <h2>SECTION</h2>
+            <div> 
+                <input type="radio" name="radioSections" value="option6" checked>
+                <label for="semiEtHors">
+                    1,5 mm²
+                </label>
+            </div>
+            <div> 
+                <input type="radio" name="radioSections" value="option7">
+                <label for="semiEtHors">
+                    2,5 mm²
+                </label>
+            </div>
+            <div> 
+                <input type="radio" name="radioSections" value="option8">
+                <label for="semiEtHors">
+                    6 mm²
+                </label>
+            </div>
+            <div> 
+                <input type="radio" name="radioSections" value="option9">
+                <label for="semiEtHors">
+                    10 mm²
+                </label>
+            </div>
+            <div> 
+                <input type="radio" name="radioSections" value="option10">
+                <label for="semiEtHors">
+                    16 mm²
+                </label>
+            </div>
+            <div> 
+                <input type="radio" name="radioSections" value="option11">
+                <label for="semiEtHors">
+                    25 mm²
+                </label>
+            </div><br>
+
+        <button type="submit">Valider</button>
+    </form>
+
+    <div id="result"></div>
+
+    <script src="index.js"></script>
+    
+</body>
+</html>

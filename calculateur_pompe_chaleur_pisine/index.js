@@ -1,15 +1,14 @@
-
 const form = document.getElementById('form');
 const longueur = document.getElementById('longueur');
 const largeur = document.getElementById('largeur');
 const hauteur = document.getElementById('hauteur');
 const selectOpts = document.getElementById('selectOpts');
 const alditude = document.getElementById('alditude');
+const radioButtons = document.querySelectorAll('input[name="geographie"]');
 
 form.addEventListener('submit', (e)=>{
     e.preventDefault();
 
-    const radioButtons = document.querySelectorAll('input[name="geographie"]');
     let metrCube = longueur.value * largeur.value * hauteur.value;
     let selectegeographie;
     for(const radioButton of radioButtons){
@@ -54,7 +53,6 @@ form.addEventListener('submit', (e)=>{
         else if(selectOpts.value === "Nord de la France" && selectegeographie == "option3"){
             result = metrCube + (metrCube * 0.20) + (metrCube * 0.25) + (metrCube * 0.25);
         }
-    
     }
     else{
         //Sud de la France
@@ -102,5 +100,18 @@ form.addEventListener('submit', (e)=>{
     <p>
         <a href="https://www.plombelecdistribution.com/">Voir les produits</a>
     </p>
-        `
+  `
+
+
+  /*
+    Pour après:
+    on doit verifier si le prix(résultat) correspand à un nombre et en function de ça on afficher un lien
+    
+    if(res == (un nompre){
+        <a href="https://www.plombelecdistribution.com/">Voir les produits</a>
+    }
+    if else(res == à un notre nombre){
+        <a href="https://www.plombelecdistribution.com/">Voir les produits</a>
+    }
+  */
 });
