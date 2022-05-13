@@ -81,7 +81,6 @@ formGaines.addEventListener('submit', (e)=>{
             break;
         }
     }
-    // console.log("valuesRadioFils", valuesRadioFils);
 
     //radio sections
     let valuesRadioSections;
@@ -92,36 +91,18 @@ formGaines.addEventListener('submit', (e)=>{
             break;
         }
     }
-    // console.log("valuesRadioSections", valuesRadioSections);
 
-    let result = 0;
-
-    //ajouter des valeurs = nos value
     let covtRadFilesInt = parseFloat(valuesRadioFils)
     let covtRadSectionsInt = parseFloat(valuesRadioSections)
+    let additionInt = covtRadFilesInt * covtRadSectionsInt;
+    const poursent20 = 20*0.33
     
 
     if(valuesRadioFils === "2" && valuesRadioSections === "1.38"){
 
-        result = covtRadFilesInt * covtRadSectionsInt;
-        // console.log(result) // 2.76
-        const poursent = 33.33/100
-        // console.log(poursent)// 0.33
-        //resulta >=33%
-        //si résulta inférieur à égale 30% d'un chifre
-          // alors on fait quel que chause
-        // 20 - poursent
-        console.log(20 / poursent)
-        //   if(result<=20)
-   
-
+       if(additionInt <= poursent20){
+           console.log("test réusi")
+       }
     }
-
-/**
- * option 1: verifie et je propose une gaine 
- */
-
-    // result = valuesRadioSections * valuesRadioFils;
-    // console.log(result)
     
 });
