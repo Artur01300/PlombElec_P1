@@ -6,7 +6,6 @@ const divResult = document.getElementById('result');
 // Calculateur pour gaines électrique
 const formGaines = document.getElementById('formGaines');
 
-
 formGaines.addEventListener('submit', (e)=>{
     e.preventDefault();
 
@@ -87,17 +86,21 @@ formGaines.addEventListener('submit', (e)=>{
         gaines = '25';
     }
     if(valuesRadioFils === "5" && valuesRadioSections === "1.78" && additionInt <= poursent32){
-        url = `<a href="https://www.plombelecdistribution.com/collections/cable-et-fil/products/gaine-electrique-galvanisee-icta-sp-gris-tag-32-50-courant-10042724">Voir les produits</a>`
+        url = 
+        `
+            <a class="link" href="https://www.plombelecdistribution.com/collections/cable-et-fil/products/gaine-electrique-galvanisee-icta-sp-gris-tag-32-50-courant-10042724">Voir les produits</a>
+        `
         gaines = '32';
     }
     //</>Pour Séction de 2,5
 
 
     let newP = document.createElement('p');
+    newP.classList.add("containDescript")
     divResult.appendChild(newP);
     newP.innerHTML = `
-    Il vous faut une gaine de <strong>${gaines}</strong> diamète.
-    <p>
+    Il vous faut une gaine de -${gaines}- diamète.
+    <p class="containrerLink">
         ${url}
     </p>
   `

@@ -5,68 +5,76 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculateur gaines électriques</title>
-    <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 
     <form id="formGaines">
-        <h1>Comment bien choisir le diamètre de ses gaines électriques ?</h1><br>
-        <h2>FILS</h2>
-            <div>
-                <input type="radio" name="fils" value="1" checked>
-                <label>
-                    1 Fil
-                </label>
-            </div>
+        <h1>Calculateur pour des gaines électriques</h1><br>
+
+        <div class="container">
+            <div class="fils">
+                <h2>FILS</h2>
+                <div>
+                    <input type="radio" name="fils" value="1" checked>
+                    <label class="fils1">
+                        1 Fil
+                    </label>
+                </div>
+        
+                <div> 
+                    <input type="radio" name="fils" value="2">
+                    <label>
+                        2 Fils
+                    </label>
+                </div>
     
-            <div> 
-                <input type="radio" name="fils" value="2">
-                <label>
-                    2 Fils
-                </label>
+                <div> 
+                    <input type="radio" name="fils" value="3">
+                    <label>
+                        3 Fils
+                    </label>
+                </div>
+    
+                <div> 
+                    <input type="radio" name="fils" value="4">
+                    <label>
+                        4 Fils
+                    </label>
+                </div>
+    
+                <div> 
+                    <input type="radio" name="fils" value="5">
+                    <label>
+                        5 Fils
+                    </label>
+                </div>
+    
             </div>
-
-            <div> 
-                <input type="radio" name="fils" value="3">
-                <label>
-                    3 Fils
-                </label>
+            <div class="sections">
+                <h2>SECTION</h2>
+    
+                <div> 
+                    <input type="radio" name="radioSections" value="1.38" checked>
+                    <label>
+                        1,5 mm²
+                    </label>
+                </div>
+    
+                <div> 
+                    <input type="radio" name="radioSections" value="1.78">
+                    <label>
+                        2,5 mm²
+                    </label>
+                </div>
             </div>
-
-            <div> 
-                <input type="radio" name="fils" value="4">
-                <label>
-                    4 Fils
-                </label>
-            </div>
-
-            <div> 
-                <input type="radio" name="fils" value="5">
-                <label>
-                    5 Fils
-                </label>
-            </div>
-
-            <h2>SECTION</h2>
-
-            <div> 
-                <input type="radio" name="radioSections" value="1.38" checked>
-                <label>
-                    1,5 mm²
-                </label>
-            </div>
-
-            <div> 
-                <input type="radio" name="radioSections" value="1.78">
-                <label>
-                    2,5 mm²
-                </label>
-            </div>
+        </div>
 
         <button type="submit">Valider</button>
+        <div id="result"></div>
     </form>
+    
 
-    <div id="result"></div>
 
     <script src="index.js"></script>
     
