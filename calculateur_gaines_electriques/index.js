@@ -3,9 +3,9 @@ const selectOpts = document.getElementById('selectOpts');
 const radioSections = document.querySelectorAll('input[name="radioSections"]');
 const radioFils = document.querySelectorAll('input[name="fils"]');
 const divResult = document.getElementById('result');
-const formGaines = document.getElementById('formGaines');
+const formId = document.getElementById('formId');
 
-formGaines.addEventListener('submit', (e)=>{
+formId.addEventListener('submit', (e)=>{
     e.preventDefault();
 
     let valuesRadioFils;
@@ -95,7 +95,7 @@ formGaines.addEventListener('submit', (e)=>{
     divResult.innerHTML =
     `
         <div class="containDescript">
-            Il vous faut une gaine de diamètre <span class="resultGaine">${gaines}</span>
+            <p>Il vous faut une gaine de diamètre <span class="resultInner">${gaines}</span></p>
             <p class="containrerLink">
                 ${url}
             </p>

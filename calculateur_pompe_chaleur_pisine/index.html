@@ -4,69 +4,74 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+    <link rel="stylesheet" type="text/css" href="../styleAll.css">
+
     <title>Document</title>
 </head>
 <body>
-    <form id="form">
-        <h1>Dimontionner la pompe à chaleur de votre piscine</h1><br>
-        <h2>Type de piscine</h2>
 
-        <div id="radio1">
-            <div>
-                <input type="radio" name="geographie" value="option1" checked>
-                <label>
-                    Enterrée
-                </label>
-            </div>
+    <div class="headerMain">
+        <form id="formId">
+            <h1>Calculateur de pompe à chaleur pour votre piscine </h1>
+            <h2>Type de piscine</h2>
     
-            <div> 
-                <input type="radio" name="geographie" value="option2">
-                <label>
-                    Semi-enterrée
-                </label>
-            </div>
-            <div> 
-                <input type="radio" name="geographie" value="option3">
-                <label>
-                    Hors-sol
-                </label>
-            </div>
-            <h2>Zone Géographique</h2>
-
-            <select id="selectOpts">
-                <option>Sud de la France</option>
-                <option>Centre de la France</option>
-                <option>Nord de la France</option>
-            </select><br><br>
+            <div id="radio1">
+                <div>
+                    <input type="radio" name="geographie" value="option1" checked>
+                    <label>
+                        Enterrée
+                    </label>
+                </div>
+        
+                <div> 
+                    <input type="radio" name="geographie" value="option2">
+                    <label>
+                        Semi-enterrée
+                    </label>
+                </div>
+                <div> 
+                    <input type="radio" name="geographie" value="option3">
+                    <label>
+                        Hors-sol
+                    </label>
+                </div>
+                <h2>Zone Géographique</h2>
     
-            <div>
-                <input type="checkbox" name="geographie" id="alditude" value="option6">
-                <label for="alditude">
-                    En altitude (à partir de 1000m)
-                </label>
-            </div>
-        </div><br>
+                <select id="selectOpts">
+                    <option>Sud de la France</option>
+                    <option>Centre de la France</option>
+                    <option>Nord de la France</option>
+                </select><br><br>
+        
+                <div>
+                    <input type="checkbox" name="geographie" id="alditude" value="option6">
+                    <label for="alditude">
+                        En altitude (à partir de 1000m)
+                    </label>
+                </div>
+            </div><br>
+    
+            <h3>Dimensions piscine</h3>
+            <div class="inputs">
+                <label for="longueur">Longueur</label>
+                <input type="number" id="longueur" placeholder="" required value="">
+            </div><br>
+    
+            <div class="inputs">
+                <label for="largeur">Largeur</label>
+                <input type="number" id="largeur" placeholder="" required value="">
+            </div><br>
+    
+            <div class="inputs">
+                <label for="hauteur">Hauteur</label>
+                <input type="number" id="hauteur" placeholder="" required value="">
+            </div><br>
+            <button type="submit">Valider</button>
+            <div id="result"></div>
+        </form>
+    </div>
 
-        <h3>Dimensions piscine</h3>
-        <div class="inputs">
-            <label for="longueur">Longueur</label>
-            <input type="number" id="longueur" placeholder="" required value="">
-        </div><br>
-
-        <div class="inputs">
-            <label for="largeur">Largeur</label>
-            <input type="number" id="largeur" placeholder="" required value="">
-        </div><br>
-
-        <div class="inputs">
-            <label for="hauteur">Hauteur</label>
-            <input type="number" id="hauteur" placeholder="" required value="">
-        </div><br>
-        <button type="submit">Valider</button>
-    </form>
-
-    <div id="result"></div>
 
     <script src="index.js"></script>
 </body>

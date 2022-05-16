@@ -1,10 +1,11 @@
-const form = document.getElementById('form');
+const form = document.getElementById('formId');
 const longueur = document.getElementById('longueur');
 const largeur = document.getElementById('largeur');
 const hauteur = document.getElementById('hauteur');
 const selectOpts = document.getElementById('selectOpts');
 const alditude = document.getElementById('alditude');
 const radioButtons = document.querySelectorAll('input[name="geographie"]');
+const divResult = document.getElementById('result');
 
 form.addEventListener('submit', (e)=>{
     e.preventDefault();
@@ -17,101 +18,110 @@ form.addEventListener('submit', (e)=>{
             break;
         }
     }
-    let result = 0;
 
+
+    let result = 0;
+    let url;
 
     if(alditude.checked == true){
         //Sud de la France
         if(selectOpts.value === "Sud de la France" && selectegeographie == "option1"){
             result = metrCube + (metrCube * 0.25);
+            url = `<a href="https://www.plombelecdistribution.com/products/pompe-chaleur-alfea-extensa-ai-5-mono-atlantic-526200-3410535262007">Voir les produits</a>`;
         }
         else if(selectOpts.value === "Sud de la France" && selectegeographie == "option2"){
             result = metrCube + (metrCube * 0.20) + (metrCube * 0.25);
         }
         else if(selectOpts.value === "Sud de la France" && selectegeographie == "option3"){
             result = metrCube + (metrCube * 0.20) + (metrCube * 0.25);
+            url = `<a href="https://www.plombelecdistribution.com/products/pompe-chaleur-alfea-extensa-ai-5-mono-atlantic-526200-3410535262007">Voir les produits</a>`;
         }
 
          //Centre de la France
          if(selectOpts.value === "Centre de la France" && selectegeographie == "option1"){
             result = metrCube + (metrCube * 0.25) + (metrCube * 0.25);
+            url = `<a href="https://www.plombelecdistribution.com/products/pompe-chaleur-alfea-extensa-ai-5-mono-atlantic-526200-3410535262007">Voir les produits</a>`;
         }
         else if(selectOpts.value === "Centre de la France" && selectegeographie == "option2"){
             result = metrCube + (metrCube * 0.20) + (metrCube * 0.25) + (metrCube * 0.25);
+            url = `<a href="https://www.plombelecdistribution.com/products/pompe-chaleur-alfea-extensa-ai-5-mono-atlantic-526200-3410535262007">Voir les produits</a>`;
         }
         else if(selectOpts.value === "Centre de la France" && selectegeographie == "option3"){
             result = metrCube + (metrCube * 0.20) + (metrCube * 0.25) + (metrCube * 0.25);
+            url = `<a href="https://www.plombelecdistribution.com/products/pompe-chaleur-alfea-extensa-ai-5-mono-atlantic-526200-3410535262007">Voir les produits</a>`;
         }
 
         //Nord de la France
         if(selectOpts.value === "Nord de la France" && selectegeographie == "option1"){
             result = metrCube + (metrCube * 0.25) + (metrCube * 0.25);
+            url = `<a href="https://www.plombelecdistribution.com/products/pompe-chaleur-alfea-extensa-ai-5-mono-atlantic-526200-3410535262007">Voir les produits</a>`;
         }
         else if(selectOpts.value === "Nord de la France" && selectegeographie == "option2"){
             result = metrCube + (metrCube * 0.20) + (metrCube * 0.25) + (metrCube * 0.25);
+            url = `<a href="https://www.plombelecdistribution.com/products/pompe-chaleur-alfea-extensa-ai-5-mono-atlantic-526200-3410535262007">Voir les produits</a>`;
         }
         else if(selectOpts.value === "Nord de la France" && selectegeographie == "option3"){
             result = metrCube + (metrCube * 0.20) + (metrCube * 0.25) + (metrCube * 0.25);
+            url = `<a href="https://www.plombelecdistribution.com/products/pompe-chaleur-alfea-extensa-ai-5-mono-atlantic-526200-3410535262007">Voir les produits</a>`;
         }
     }
     else{
         //Sud de la France
         if(selectOpts.value === "Sud de la France" && selectegeographie == "option1"){
             result = metrCube;
+            url = `<a href="https://www.plombelecdistribution.com/products/pompe-chaleur-alfea-extensa-ai-5-mono-atlantic-526200-3410535262007">Voir les produits</a>`;
         }
         else if(selectOpts.value === "Sud de la France" && selectegeographie == "option2"){
             result = metrCube + (metrCube * 0.20);
+            url = `<a href="https://www.plombelecdistribution.com/products/pompe-chaleur-alfea-extensa-ai-5-mono-atlantic-526200-3410535262007">Voir les produits</a>`;
         }
         else if(selectOpts.value === "Sud de la France" && selectegeographie == "option3"){
             result = metrCube + (metrCube * 0.20);
+            url = `<a href="https://www.plombelecdistribution.com/products/pompe-chaleur-alfea-extensa-ai-5-mono-atlantic-526200-3410535262007">Voir les produits</a>`;
         }
 
 
         //Centre de la France
         if(selectOpts.value === "Centre de la France" && selectegeographie == "option1"){
             result = metrCube + (metrCube * 0.25);
+            url = `<a href="https://www.plombelecdistribution.com/products/pompe-chaleur-alfea-extensa-ai-5-mono-atlantic-526200-3410535262007">Voir les produits</a>`;
         }
         else if(selectOpts.value === "Centre de la France" && selectegeographie == "option2"){
-            result = metrCube + (metrCube * 0.20) + (metrCube * 0.25)
+            result = metrCube + (metrCube * 0.20) + (metrCube * 0.25);
+            url = `<a href="https://www.plombelecdistribution.com/products/pompe-chaleur-alfea-extensa-ai-5-mono-atlantic-526200-3410535262007">Voir les produits</a>`;
         }
         else if(selectOpts.value === "Centre de la France" && selectegeographie == "option3"){
-            result = metrCube + (metrCube * 0.20) + (metrCube * 0.25)
+            result = metrCube + (metrCube * 0.20) + (metrCube * 0.25);
+            url = `<a href="https://www.plombelecdistribution.com/products/pompe-chaleur-alfea-extensa-ai-5-mono-atlantic-526200-3410535262007">Voir les produits</a>`;
         }
 
         //Nord de la France
         if(selectOpts.value === "Nord de la France" && selectegeographie == "option1"){
             result = metrCube + (metrCube * 0.25);
+            url = `<a href="https://www.plombelecdistribution.com/products/pompe-chaleur-alfea-extensa-ai-5-mono-atlantic-526200-3410535262007">Voir les produits</a>`;
         }
         else if(selectOpts.value === "Nord de la France" && selectegeographie == "option2"){
-            result = metrCube + (metrCube * 0.20) + (metrCube * 0.25)
+            result = metrCube + (metrCube * 0.20) + (metrCube * 0.25);
+            url = `<a href="https://www.plombelecdistribution.com/products/pompe-chaleur-alfea-extensa-ai-5-mono-atlantic-526200-3410535262007">Voir les produits</a>`;
         }
         else if(selectOpts.value === "Nord de la France" && selectegeographie == "option3"){
-            result = metrCube + (metrCube * 0.20) + (metrCube * 0.25)
+            result = metrCube + (metrCube * 0.20) + (metrCube * 0.25);
+            url = `<a href="https://www.plombelecdistribution.com/products/pompe-chaleur-alfea-extensa-ai-5-mono-atlantic-526200-3410535262007">Voir les produits</a>`;
         }
     }
-
-    const divResult = document.getElementById('result');
   
     let newP = document.createElement('p');
     divResult.appendChild(newP);
     let resultRound = Math.round(result);
-    newP.innerHTML = `
-    <strong>Resultat :</strong>  Il vous faut une pompe à chaleur pouvant chauffer une piscine ayant un volume de <strong> ${resultRound}</strong> m³.
-    <p>
-        <a href="https://www.plombelecdistribution.com/">Voir les produits</a>
-    </p>
-  `
 
-
-  /*
-    Pour après:
-    on doit verifier si le prix(résultat) correspand à un nombre et en function de ça on afficher un lien
-    
-    if(res == (un nompre){
-        <a href="https://www.plombelecdistribution.com/">Voir les produits</a>
-    }
-    if else(res == à un notre nombre){
-        <a href="https://www.plombelecdistribution.com/">Voir les produits</a>
-    }
-  */
+    divResult.innerHTML =
+    `
+        <div class="containDescript">
+         <p>Il vous faut une pompe à chaleur ayant un volume de <span class="resultInner">${result}</span>m³</p>
+            <p class="containrerLink">
+                ${url}
+            </p>
+        </div>    
+    `
 });
+
