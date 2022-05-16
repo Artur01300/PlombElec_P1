@@ -1,15 +1,13 @@
+// Calculateur pour gaines électrique
 const selectOpts = document.getElementById('selectOpts');
 const radioSections = document.querySelectorAll('input[name="radioSections"]');
 const radioFils = document.querySelectorAll('input[name="fils"]');
 const divResult = document.getElementById('result');
-
-// Calculateur pour gaines électrique
 const formGaines = document.getElementById('formGaines');
 
 formGaines.addEventListener('submit', (e)=>{
     e.preventDefault();
 
-    //radio fils
     let valuesRadioFils;
     for(const radioFil of radioFils){
 
@@ -33,10 +31,10 @@ formGaines.addEventListener('submit', (e)=>{
     let covtRadSectionsInt = parseFloat(valuesRadioSections);
     let additionInt = covtRadFilesInt * covtRadSectionsInt;
 
-    const poursent16 = 16*0.33 //5.28
-    const poursent20 = 20*0.33 //6.6
-    const poursent25 = 25*0.33 //8.25
-    const poursent32 = 32*0.33 //10.89
+    const poursent16 = 16*0.33; //5.28
+    const poursent20 = 20*0.33; //6.6
+    const poursent25 = 25*0.33; //8.25
+    const poursent32 = 32*0.33; //10.89
 
     let url;
     let gaines;
@@ -93,15 +91,14 @@ formGaines.addEventListener('submit', (e)=>{
         gaines = '32';
     }
     //</>Pour Séction de 2,5
-
-
-    let newP = document.createElement('p');
-    newP.classList.add("containDescript")
-    divResult.appendChild(newP);
-    newP.innerHTML = `
-    Il vous faut une gaine de -${gaines}- diamète.
-    <p class="containrerLink">
-        ${url}
-    </p>
-  `
+    
+    divResult.innerHTML =
+    `
+        <div class="containDescript">
+            Il vous faut une gaine de diamètre <span class="resultGaine">${gaines}</span>
+            <p class="containrerLink">
+                ${url}
+            </p>
+        </div>    
+    `
 });
