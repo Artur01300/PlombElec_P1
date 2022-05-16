@@ -31,6 +31,7 @@ form.addEventListener('submit', (e)=>{
         }
         else if(selectOpts.value === "Sud de la France" && selectegeographie == "option2"){
             result = metrCube + (metrCube * 0.20) + (metrCube * 0.25);
+             url = `<a href="https://www.plombelecdistribution.com/products/pompe-chaleur-alfea-extensa-ai-5-mono-atlantic-526200-3410535262007">Voir les produits</a>`;
         }
         else if(selectOpts.value === "Sud de la France" && selectegeographie == "option3"){
             result = metrCube + (metrCube * 0.20) + (metrCube * 0.25);

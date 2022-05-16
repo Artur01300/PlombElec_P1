@@ -9,76 +9,73 @@
 </head>
 <body>
 
- <div class="headerMain">
-     <form id="formId">
-         <h1>Calculateur pour des gaines électriques</h1><br>
- 
-         <div class="container">
-             <div class="fils">
-                 <h2>FILS</h2>
-                 <div>
-                     <input type="radio" name="fils" value="1" checked>
-                     <label class="fils1">
-                         1 Fil
-                     </label>
-                 </div>
-         
-                 <div> 
-                     <input type="radio" name="fils" value="2">
-                     <label>
-                         2 Fils
-                     </label>
-                 </div>
-     
-                 <div> 
-                     <input type="radio" name="fils" value="3">
-                     <label>
-                         3 Fils
-                     </label>
-                 </div>
-     
-                 <div> 
-                     <input type="radio" name="fils" value="4">
-                     <label>
-                         4 Fils
-                     </label>
-                 </div>
-     
-                 <div> 
-                     <input type="radio" name="fils" value="5">
-                     <label>
-                         5 Fils
-                     </label>
-                 </div>
-     
-             </div>
-             
-             <div class="sections">
-                 <h2>SECTION</h2>
-     
-                 <div> 
-                     <input type="radio" name="radioSections" value="1.38" checked>
-                     <label>
-                         1,5 mm²
-                     </label>
-                 </div>
-     
-                 <div> 
-                     <input type="radio" name="radioSections" value="1.78">
-                     <label>
-                         2,5 mm²
-                     </label>
-                 </div>
-             </div>
-         </div>
- 
-         <button type="submit">Valider</button>
-         <div id="result"></div>
-     </form>
-
- </div>>
+    <div class="headerMain">
+        <form id="formId">
+            <h1>Calculateur pour des gaines électriques</h1><br>
     
+            <div class="container">
+                <div class="radio1">
 
+                    <h2>FILS</h2>
+                    <div>
+                        <input type="radio" name="fils" value="1" checked>
+                        <label class="fils1">
+                            1 Fil
+                        </label>
+                    </div>
+            
+                    <div> 
+                        <input type="radio" name="fils" value="2">
+                        <label>
+                            2 Fils
+                        </label>
+                    </div>
+            
+                    <div> 
+                        <input type="radio" name="fils" value="3">
+                        <label>
+                            3 Fils
+                        </label>
+                    </div>
+
+                    <div> 
+                        <input type="radio" name="fils" value="4">
+                        <label>
+                            4 Fils
+                        </label>
+                    </div>
+
+                    <div> 
+                        <input type="radio" name="fils" value="5">
+                        <label>
+                            5 Fils
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="radio2">
+                    <h2>SECTION</h2>
+        
+                    <div> 
+                        <input type="radio" name="radioSections" value="1.38" checked>
+                        <label>
+                            1,5 mm²
+                        </label>
+                    </div>
+        
+                    <div> 
+                        <input type="radio" name="radioSections" value="1.78">
+                        <label>
+                            2,5 mm²
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit">Valider</button>
+            <div id="result"></div>
+        </form>
+    </div>
 
     <script src="index.js"></script>
     

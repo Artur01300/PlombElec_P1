@@ -1,0 +1,26 @@
+.calPompChaleurRadio1{
+   text-align: center;
+}
+
+.calPompChaleurRadio1Semi{
+   padding-left: 2em;
+}
+
+.containerPartie2{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 3em;
+    margin: auto;
+}
+.partie1, .partie2{
+    width: 100%;
+    text-align: center;
+}
+
+.inputLongeur{
+    padding-right: -40px;
+}
+
+.inputs{
+    width: 300px
+}
