@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculateur gaines électriques</title>
     <link rel="stylesheet" type="text/css" href="../styleAll.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
 </head>
 <body>
 
@@ -72,7 +74,18 @@
                 </div>
             </div>
 
-            <button type="submit">Valider</button>
+            <div id="containter_combin" class="container"></div>
+
+            <div class="submitAndCombin">
+                <button type="submit">Valider</button>
+                <div class="submitAndCombin-flexchexbox">
+                    <input type="checkbox" name="combiner" id="combiner" value="option7">
+                    <label for="combiner">
+                        Combiner fils et section
+                    </label>
+                </div>
+            </div>
+
             <div id="result"></div>
         </form>
     </div>

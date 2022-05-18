@@ -42,7 +42,6 @@ formId.addEventListener('submit', (e)=>{
     let covtRadSectionsInt = parseFloat(valuesRadioSections);
     let additionInt = covtRadFilesInt * covtRadSectionsInt;
 
-
     const poursent16 = 16*0.33; //5.28
     const poursent20 = 20*0.33; //6.6
     const poursent25 = 25*0.33; //8.25
@@ -114,3 +113,78 @@ formId.addEventListener('submit', (e)=>{
         </div>    
     `
 });
+
+const radioCombiner = document.getElementById('combiner');
+const containter = document.getElementById('containter_combin');
+
+radioCombiner.addEventListener('change', (e)=>{
+    e.preventDefault();
+
+    if(radioCombiner.checked == true){
+        containter.innerHTML = 
+        `
+            <div class="radio1">
+
+                <h2>FILS</h2>
+                <div>
+                    <input type="radio" name="combinFils" value="1" checked>
+                    <label class="fils1">
+                        1 Fil
+                    </label>
+                </div>
+
+                <div> 
+                    <input type="radio" name="combinFils" value="2">
+                    <label>
+                        2 Fils
+                    </label>
+                </div>
+
+                <div> 
+                    <input type="radio" name="combinFils" value="3">
+                    <label>
+                        3 Fils
+                    </label>
+                </div>
+
+                <div> 
+                    <input type="radio" name="combinFils" value="4">
+                    <label>
+                        4 Fils
+                    </label>
+                </div>
+
+                <div> 
+                    <input type="radio" name="combinFils" value="5">
+                    <label>
+                        5 Fils
+                    </label>
+                </div>
+            </div>
+            
+            <div class="radio2">
+                <h2>SECTION</h2>
+
+                <div> 
+                    <input type="radio" name="combinRadioSections" value="1.38" checked>
+                    <label>
+                        1,5 mm²
+                    </label>
+                </div>
+
+                <div> 
+                    <input type="radio" name="combinRadioSections" value="1.78">
+                    <label>
+                        2,5 mm²
+                    </label>
+                </div>
+            </div>
+        `
+
+        console.log
+    }
+    else{
+        containter.innerHTML = " ";
+    }
+});
+
