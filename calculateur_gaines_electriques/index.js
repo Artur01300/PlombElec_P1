@@ -27,9 +27,21 @@ formId.addEventListener('submit', (e)=>{
         }
     }
 
+    /** 
+     * Etap 1
+        Pour bien choisir le diamètre de ses gaines électriques, il faut convertir les section par dimamètre(mm² par mm):
+        - voir le tableau de conversion .pbd
+        par exemple pour notre section 1,5mm² on a besoin 1.38mm
+
+    * Etap 2
+        multiplier nombre de câble par une secton (3*1.38)
+        le résultat doit être enfèrieur à égale de 0,33.33% (<=)
+
+    */
     let covtRadFilesInt = parseFloat(valuesRadioFils);
     let covtRadSectionsInt = parseFloat(valuesRadioSections);
     let additionInt = covtRadFilesInt * covtRadSectionsInt;
+
 
     const poursent16 = 16*0.33; //5.28
     const poursent20 = 20*0.33; //6.6
