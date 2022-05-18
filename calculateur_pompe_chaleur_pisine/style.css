@@ -17,10 +17,21 @@
     text-align: center;
 }
 
+.part2Altitud{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .inputLongeur{
     padding-right: -40px;
 }
 
-.inputs{
-    width: 300px
+#longueur, #largeur, #hauteur {
+    width: 40px;
 }
+
+#longueur{
+    margin-left: 0.9em;
+}
+
