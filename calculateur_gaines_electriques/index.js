@@ -14,37 +14,32 @@ formId.addEventListener('submit', (e)=>{
 
     let valuesRadioFils;
     let valuesRadioSections;
-    let valueCombinFils;
-    let valueradiocCmbinSections;
+    let valueRadioCombinFils;
+    let valueRadioCmbinSections;
 
-        for(const radio of radioFils){
-    
-            if(radio.checked){
-                valuesRadioFils = radio.value;
-                if(radioCombinFils){
-                    valueCombinFils = radio.value;
-                }
-            }
+    for(const radio of radioFils){
+        if(radio.checked){
+            valuesRadioFils = radio.value;
         }
-        for(const section of radioSections){
+    }
+    for(const section of radioSections){
 
-            if(section.checked){
-                valuesRadioSections = section.value;
-            }
+        if(section.checked){
+            valuesRadioSections = section.value;
         }
+    }
+    //Combiner fils et section
+    for(const radio of radioCombinFils){
 
-        for(const radio of radioCombinFils){
-    
-            if(radio.checked){
-                valueCombinFils = radio.value;
-            }
+        if(radio.checked){
+            valueRadioCombinFils = radio.value;
         }
-        for(const section of radioCombinSections){
-
-            if(section.checked){
-                valueradiocCmbinSections = section.value;
-            }
+    }
+    for(const section of radioCombinSections){
+        if(section.checked){
+            valueRadioCmbinSections = section.value;
         }
+    }
 
     /** 
      * Etap 1
@@ -57,67 +52,63 @@ formId.addEventListener('submit', (e)=>{
         le résultat doit être inférieur ou égal de 0,33.33% (<=)
 
     */
-    let covtRadFilesInt = parseFloat(valuesRadioFils);
-    let covtRadSectionsInt = parseFloat(valuesRadioSections);
-    let additionInt = covtRadFilesInt * covtRadSectionsInt;
+    let covtRadioFils = parseFloat(valuesRadioFils);
+    let covtRadioSections = parseFloat(valuesRadioSections);
+    let totalResultRadios1 = covtRadioFils * covtRadioSections;
 
-    const poursent16 = 16*0.33; //5.28
-    const poursent20 = 20*0.33; //6.6
-    const poursent25 = 25*0.33; //8.25
-    const poursent32 = 32*0.33; //10.89
+    //Combiner fils et section
+    let covtRadioRadioCombinFils = parseFloat(valueRadioCombinFils);
+    let covtRadioCmbinSections = parseFloat(valueRadioCmbinSections);
+    let totalResultRadios2 = covtRadioRadioCombinFils * covtRadioCmbinSections;
 
-    //Pour Séction de 1,5 
-    if(valuesRadioFils === "1" && valuesRadioSections === "1.38" && additionInt <= poursent16){
+
+    const poursent16 = 16*0.3333; //5.28
+    const poursent20 = 20*0.3333; //6.6
+    const poursent25 = 25*0.3333; //8.25
+    const poursent32 = 32*0.3333; //10.89
+
+    if( totalResultRadios1<= poursent16 ){
         url = `<a href="https://www.plombelecdistribution.com/collections/cable-et-fil/products/gaine-electrique-galvanisee-icta-dp-gris-tag-16-100-courant-10041140">Voir les produits</a>`
         gaines = '16';
     }
-
-    if(valuesRadioFils === "2" && valuesRadioSections === "1.38" && additionInt <= poursent16){
-        url = `<a href="https://www.plombelecdistribution.com/collections/cable-et-fil/products/gaine-electrique-galvanisee-icta-dp-gris-tag-16-100-courant-10041140">Voir les produits</a>`
-        gaines = '16';
-    }
-    if(valuesRadioFils === "3" && valuesRadioSections === "1.38" && additionInt <= poursent16){
-        url = `<a href="https://www.plombelecdistribution.com/collections/cable-et-fil/products/gaine-electrique-galvanisee-icta-dp-gris-tag-16-100-courant-10041140">Voir les produits</a>`
-        gaines = '16';
-        // </>Pour Séction de 1,5 et une gaine de 16
-    }
-
-    if(valuesRadioFils === "4" && valuesRadioSections === "1.38" && additionInt <= poursent20){
+    else if ( totalResultRadios1 <= poursent20 ){
         url = `<a href="https://www.plombelecdistribution.com/collections/cable-et-fil/products/gaine-electrique-galvanisee-icta-dp-gris-tag-20-100-courant-10041540">Voir les produits</a>`
         gaines = '20';
     }
-
-    if(valuesRadioFils === "5" && valuesRadioSections === "1.38" && additionInt <= poursent25){
+    else if ( totalResultRadios1 <= poursent25 ){
         url = `<a href="https://www.plombelecdistribution.com/collections/cable-et-fil/products/gaine-electrique-galvanisee-icta-dp-gris-tag-25-100-courant-10041940">Voir les produits</a>`
         gaines = '25';
     }
-    // </>Pour Séction de 1,5
-
-    //Pour Séction de 2,5
-    if(valuesRadioFils === "1" && valuesRadioSections === "1.78" && additionInt <= poursent16){
-        url = `<a href="https://www.plombelecdistribution.com/collections/cable-et-fil/products/gaine-electrique-galvanisee-icta-dp-gris-tag-16-100-courant-10041140">Voir les produits</a>`
-        gaines = '16';
-    }
-    if(valuesRadioFils === "2" && valuesRadioSections === "1.78" && additionInt <= poursent16){
-        url = `<a href="https://www.plombelecdistribution.com/collections/cable-et-fil/products/gaine-electrique-galvanisee-icta-dp-gris-tag-16-100-courant-10041140">Voir les produits</a>`
-        gaines = '16';
-    }
-    if(valuesRadioFils === "3" && valuesRadioSections === "1.78" && additionInt <= poursent20){
-        url = `<a href="https://www.plombelecdistribution.com/collections/cable-et-fil/products/gaine-electrique-galvanisee-icta-dp-gris-tag-20-100-courant-10041540">Voir les produits</a>`
-        gaines = '20';
-    }
-    if(valuesRadioFils === "4" && valuesRadioSections === "1.78" && additionInt <= poursent25){
-        url = `<a href="https://www.plombelecdistribution.com/collections/cable-et-fil/products/gaine-electrique-galvanisee-icta-dp-gris-tag-25-100-courant-10041940">Voir les produits</a>`
-        gaines = '25';
-    }
-    if(valuesRadioFils === "5" && valuesRadioSections === "1.78" && additionInt <= poursent32){
-        url = 
-        `
-            <a class="link" href="https://www.plombelecdistribution.com/collections/cable-et-fil/products/gaine-electrique-galvanisee-icta-sp-gris-tag-32-50-courant-10042724">Voir les produits</a>
-        `
+    else if ( totalResultRadios1 <= poursent32 ){
+        url = `<a class="link" href="https://www.plombelecdistribution.com/collections/cable-et-fil/products/gaine-electrique-galvanisee-icta-sp-gris-tag-32-50-courant-10042724">Voir les produits</a>`
         gaines = '32';
     }
-    //</>Pour Séction de 2,5
+
+    //Combiner fils et section
+    if(radioCombiner.checked){
+        let totalResult = totalResultRadios1 + totalResultRadios2;
+        if( totalResult <= poursent16 ){
+            url = `<a href="https://www.plombelecdistribution.com/collections/cable-et-fil/products/gaine-electrique-galvanisee-icta-dp-gris-tag-16-100-courant-10041140">Voir les produits</a>`
+            gaines = '16';
+        }
+        else if ( totalResult <= poursent20 ){
+            url = `<a href="https://www.plombelecdistribution.com/collections/cable-et-fil/products/gaine-electrique-galvanisee-icta-dp-gris-tag-20-100-courant-10041540">Voir les produits</a>`
+            gaines = '20';
+        }
+        else if ( totalResult <= poursent25 ){
+            url = `<a href="https://www.plombelecdistribution.com/collections/cable-et-fil/products/gaine-electrique-galvanisee-icta-dp-gris-tag-25-100-courant-10041940">Voir les produits</a>`
+            gaines = '25';
+        }
+        else if ( totalResult <= poursent32 ){
+            url = `<a class="link" href="https://www.plombelecdistribution.com/collections/cable-et-fil/products/gaine-electrique-galvanisee-icta-sp-gris-tag-32-50-courant-10042724">Voir les produits</a>`
+            gaines = '32';
+        }
+        else{
+            alert(`Vos fils dépassent la norme recommandée : les fils doit être inférieur ou égale 33 % de la gaine. Vos fils font ${totalResult.toFixed(2)} mm`);
+            location.reload();
+        }
+    }
+
     
     divResult.innerHTML =
     `
