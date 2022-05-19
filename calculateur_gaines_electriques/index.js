@@ -5,33 +5,46 @@ const divResult = document.getElementById('result');
 const formId = document.getElementById('formId');
 
 const radioCombinFils = document.querySelectorAll('input[name="combinFils"]');
-const radiocombinSections = document.querySelectorAll('input[name="combinRadioSections"]');
+const radioCombinSections = document.querySelectorAll('input[name="combinRadioSections"]');
 
-console.log(radiocombinSections)
-
+let url;
+let gaines;
 formId.addEventListener('submit', (e)=>{
     e.preventDefault();
 
     let valuesRadioFils;
     let valuesRadioSections;
+    let valueCombinFils;
+    let valueradiocCmbinSections;
 
-    function boucleRadios(radios, sections){
-        for(const radio of radios){
+        for(const radio of radioFils){
     
             if(radio.checked){
                 valuesRadioFils = radio.value;
+                if(radioCombinFils){
+                    valueCombinFils = radio.value;
+                }
             }
         }
-
-        for(const section of sections){
+        for(const section of radioSections){
 
             if(section.checked){
                 valuesRadioSections = section.value;
             }
         }
-    }
 
-    boucleRadios(radioFils, radioSections);
+        for(const radio of radioCombinFils){
+    
+            if(radio.checked){
+                valueCombinFils = radio.value;
+            }
+        }
+        for(const section of radioCombinSections){
+
+            if(section.checked){
+                valueradiocCmbinSections = section.value;
+            }
+        }
 
     /** 
      * Etap 1
@@ -52,9 +65,6 @@ formId.addEventListener('submit', (e)=>{
     const poursent20 = 20*0.33; //6.6
     const poursent25 = 25*0.33; //8.25
     const poursent32 = 32*0.33; //10.89
-
-    let url;
-    let gaines;
 
     //Pour Séction de 1,5 
     if(valuesRadioFils === "1" && valuesRadioSections === "1.38" && additionInt <= poursent16){
@@ -124,14 +134,15 @@ formId.addEventListener('submit', (e)=>{
 const radioCombiner = document.getElementById('combiner');
 const containter = document.getElementById('containter_combin');
 
-
 radioCombiner.addEventListener('change', (e)=>{
     e.preventDefault();
     
     if(radioCombiner.checked){
-        containter.style.display = "initial"
+        containter.style.display = "block";
+        divResult.innerHTML = "";
     }
     else{
-        containter.style.display = "none"
+        containter.style.display = "none";
+        divResult.innerHTML = "";
     }
 });
