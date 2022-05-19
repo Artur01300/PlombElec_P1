@@ -8,3 +8,14 @@
     justify-content: center;
     align-items: center;
 }
+
+
+/* 
+    Pour radioCombiner:
+    Par défaut la contenue est desactivé 
+*/
+#containter_combin{
+    content: "";
+    display: none;
+    clear: both;
+}

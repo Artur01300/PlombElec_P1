@@ -1,41 +1,47 @@
-// Calculateur pour gaines électrique
 const selectOpts = document.getElementById('selectOpts');
 const radioSections = document.querySelectorAll('input[name="radioSections"]');
 const radioFils = document.querySelectorAll('input[name="fils"]');
 const divResult = document.getElementById('result');
 const formId = document.getElementById('formId');
 
+const radioCombinFils = document.querySelectorAll('input[name="combinFils"]');
+const radiocombinSections = document.querySelectorAll('input[name="combinRadioSections"]');
+
+console.log(radiocombinSections)
+
 formId.addEventListener('submit', (e)=>{
     e.preventDefault();
 
     let valuesRadioFils;
-    for(const radioFil of radioFils){
-
-        if(radioFil.checked){
-            valuesRadioFils = radioFil.value;
-            break;
-        }
-    }
-
-    //radio sections
     let valuesRadioSections;
-    for(const radioSection of radioSections){
 
-        if(radioSection.checked){
-            valuesRadioSections = radioSection.value;
-            break;
+    function boucleRadios(radios, sections){
+        for(const radio of radios){
+    
+            if(radio.checked){
+                valuesRadioFils = radio.value;
+            }
+        }
+
+        for(const section of sections){
+
+            if(section.checked){
+                valuesRadioSections = section.value;
+            }
         }
     }
+
+    boucleRadios(radioFils, radioSections);
 
     /** 
      * Etap 1
-        Pour bien choisir le diamètre de ses gaines électriques, il faut convertir les section par dimamètre(mm² par mm):
+        Pour bien choisir le diamètre de ces gaines électriques, il faut convertir les sections par dimamètre(mm² par mm):
         - voir le tableau de conversion .pbd
         par exemple pour notre section 1,5mm² on a besoin 1.38mm
 
     * Etap 2
         multiplier nombre de câble par une secton (3*1.38)
-        le résultat doit être enfèrieur à égale de 0,33.33% (<=)
+        le résultat doit être inférieur ou égal de 0,33.33% (<=)
 
     */
     let covtRadFilesInt = parseFloat(valuesRadioFils);
@@ -114,77 +120,18 @@ formId.addEventListener('submit', (e)=>{
     `
 });
 
+
 const radioCombiner = document.getElementById('combiner');
 const containter = document.getElementById('containter_combin');
 
+
 radioCombiner.addEventListener('change', (e)=>{
     e.preventDefault();
-
-    if(radioCombiner.checked == true){
-        containter.innerHTML = 
-        `
-            <div class="radio1">
-
-                <h2>FILS</h2>
-                <div>
-                    <input type="radio" name="combinFils" value="1" checked>
-                    <label class="fils1">
-                        1 Fil
-                    </label>
-                </div>
-
-                <div> 
-                    <input type="radio" name="combinFils" value="2">
-                    <label>
-                        2 Fils
-                    </label>
-                </div>
-
-                <div> 
-                    <input type="radio" name="combinFils" value="3">
-                    <label>
-                        3 Fils
-                    </label>
-                </div>
-
-                <div> 
-                    <input type="radio" name="combinFils" value="4">
-                    <label>
-                        4 Fils
-                    </label>
-                </div>
-
-                <div> 
-                    <input type="radio" name="combinFils" value="5">
-                    <label>
-                        5 Fils
-                    </label>
-                </div>
-            </div>
-            
-            <div class="radio2">
-                <h2>SECTION</h2>
-
-                <div> 
-                    <input type="radio" name="combinRadioSections" value="1.38" checked>
-                    <label>
-                        1,5 mm²
-                    </label>
-                </div>
-
-                <div> 
-                    <input type="radio" name="combinRadioSections" value="1.78">
-                    <label>
-                        2,5 mm²
-                    </label>
-                </div>
-            </div>
-        `
-
-        console.log
+    
+    if(radioCombiner.checked){
+        containter.style.display = "initial"
     }
     else{
-        containter.innerHTML = " ";
+        containter.style.display = "none"
     }
 });
-
