@@ -4,17 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
     <link rel="stylesheet" type="text/css" href="../styleAll.css">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="description" content="Calculateur de pompe à chaleur pour votre pisine, Plomb'elec">
 
-    <title>Document</title>
+    <title>Calculateur de pompe à chaleur pour des piscines</title>
 </head>
 <body>
 
     <div class="headerMain">
         <form id="formId">
-            <h1>Calculateur de pompe à chaleur pour votre piscine </h1>
+            <a href="/main.html">
+                <h1>Calculez la dimension de votre piscine pour sélectionner la pompe à chaleur adaptée </h1>
+            </a>
             <div class="container">
                 <div class="radio1">
                     <h2>Type de piscine</h2>
@@ -56,25 +58,25 @@
 
             <div class="container">
                 <div class="partie1">
-                    <h3>Dimensions piscine</h3>
+                    <h2>Dimensions piscine</h2>
                     <div class="inputs inputLongeur">
-                        <input type="number" id="longueur" placeholder="" required value="">
+                        <input type="number" id="longueur" placeholder="" required value="" min="1">
                         <label for="longueur">Longueur</label>
                     </div><br>
             
                     <div class="inputs">
-                        <input type="number" id="largeur" placeholder="" required value="">
+                        <input type="number" id="largeur" placeholder="" required value="" min="1">
                         <label for="largeur">Largeur</label>
                     </div><br>
             
                     <div class="inputs">
-                        <input type="number" id="hauteur" placeholder="" required value="">
+                        <input type="number" id="hauteur" placeholder="" required value="" min="1">
                         <label for="hauteur">Hauteur</label>
                     </div>
                 </div>
 
                 <div class="partie2">
-                    <h3>Altitude</h3>
+                    <h2>Altitude</h2>
                     <div class="part2Altitud">
                         <input type="checkbox" name="geographie" id="alditude" value="option6">
                         <label for="alditude">
@@ -89,7 +91,6 @@
             <div id="result"></div>
         </form>
     </div>
-
 
     <script src="index.js"></script>
 </body>

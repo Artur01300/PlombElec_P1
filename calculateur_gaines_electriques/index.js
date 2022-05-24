@@ -17,20 +17,20 @@ formId.addEventListener('submit', (e)=>{
     let valueRadioCombinFils;
     let valueRadioCmbinSections;
 
+
+
     for(const radio of radioFils){
         if(radio.checked){
             valuesRadioFils = radio.value;
         }
     }
     for(const section of radioSections){
-
         if(section.checked){
             valuesRadioSections = section.value;
         }
     }
-    //Combiner fils et section
+    // Combiner fils et section
     for(const radio of radioCombinFils){
-
         if(radio.checked){
             valueRadioCombinFils = radio.value;
         }
@@ -104,7 +104,7 @@ formId.addEventListener('submit', (e)=>{
             gaines = '32';
         }
         else{
-            alert(`Vos fils dépassent la norme recommandée : les fils doit être inférieur ou égale 33 % de la gaine. Vos fils font ${totalResult.toFixed(2)} mm`);
+            alert(`Vos fils font ${totalResult.toFixed(2)} mm, dépassent la norme recommandée : ils doivent être inférieurs ou égales 33,33% de la gaine.`);
             location.reload();
         }
     }

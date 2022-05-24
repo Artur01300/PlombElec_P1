@@ -4,21 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculateur gaines électriques</title>
     <link rel="stylesheet" type="text/css" href="../styleAll.css">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="description" content="Calculateur des fils éléctrique pour des gaines éléctriques, Plomb'elec">
+    <title>Calculateur fils éléctrique pour des gaines électriques</title>
 
 </head>
 <body>
 
     <div class="headerMain">
         <form id="formId">
-            <h1>Calculateur pour des gaines électriques</h1><br>
+            <a href="/main.html">
+                <h1>Calculez vos fils avec différents sections pour sélectionner des gaines adaptées</h1>
+            </a>
     
             <div class="container">
                 <div class="radio1">
-
-                    <h2>FILS</h2>
+                    <h2>Fils</h2>
                     <div>
                         <input type="radio" name="fils" value="1" checked>
                         <label class="fils1">
@@ -56,7 +58,7 @@
                 </div>
                 
                 <div class="radio2">
-                    <h2>SECTION</h2>
+                    <h2>Sections</h2>
         
                     <div> 
                         <input type="radio" name="radioSections" value="1.38" checked>
@@ -74,11 +76,18 @@
                 </div>
             </div>
 
+            <div class="submitAndCombin-flexchexbox">
+                <input type="checkbox" name="combiner" id="combiner" value="option7">
+                <label for="combiner">
+                    Combiner fils et sections
+                </label>
+            </div>
+
             <div id="containter_combin">
                 <div class="container">
                     <div class="radio1">
     
-                        <h2>FILS</h2>
+                        <h2>Fils</h2>
                         <div>
                             <input type="radio" name="combinFils" value="1" checked>
                             <label class="fils1">
@@ -116,7 +125,7 @@
                     </div>
                     
                     <div class="radio2">
-                        <h2>SECTION</h2>
+                        <h2>Sections</h2>
         
                         <div> 
                             <input type="radio" name="combinRadioSections" value="1.38" checked>
@@ -137,12 +146,6 @@
 
             <div class="submitAndCombin">
                 <button type="submit">Valider</button>
-                <div class="submitAndCombin-flexchexbox">
-                    <input type="checkbox" name="combiner" id="combiner" value="option7">
-                    <label for="combiner">
-                        Combiner fils et section
-                    </label>
-                </div>
             </div>
 
             <div id="result"></div>
