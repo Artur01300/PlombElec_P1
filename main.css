@@ -15,7 +15,9 @@
     align-items: center; 
     padding: 1em;
 }
-.flexIcons a:hover {
-    transform:scale(1.2);
-
+.flexIcons a{
+    transition-duration: .8s;
+}
+.flexIcons a:hover{
+    transform:scale(1.1);
 }
