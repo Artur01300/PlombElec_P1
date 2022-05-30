@@ -1,7 +1,9 @@
 .container_icons{
-    width: 30%;
+    width: 50%;
     justify-content: space-around;
     display: flex;
+    flex-wrap: wrap;
+    padding-top: 5em;
 }
 .icons{
     background: white;

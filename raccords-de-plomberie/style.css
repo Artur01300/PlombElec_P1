@@ -1,0 +1,15 @@
+.container table{ 
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+}
+.container caption{
+    padding: 2.5em;
+}
+.container tr{
+    border: solid;
+    border-width: 1px 0;
+}
+.trWithoutLine{
+    border: 0px !important;
+}
