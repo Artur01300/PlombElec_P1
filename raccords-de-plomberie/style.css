@@ -1,15 +1,17 @@
-.container table{ 
+table{
     width: 100%;
     text-align: center;
     border-collapse: collapse;
 }
-.container caption{
-    padding: 2.5em;
+
+caption{
+    display: none;
 }
-.container tr{
-    border: solid;
-    border-width: 1px 0;
+
+tr{
+    border-bottom: 1px solid #eee;
 }
-.trWithoutLine{
-    border: 0px !important;
+
+th, td {
+  padding: 10px 0
 }

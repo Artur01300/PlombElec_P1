@@ -41,7 +41,7 @@ formId.addEventListener('submit', (e)=>{
         }
     }
 
-    /** 
+    /**
      * Etap 1
         Pour bien choisir le diamètre de ces gaines électriques, il faut convertir les sections par dimamètre(mm² par mm):
         - voir le tableau de conversion .pbd
@@ -68,19 +68,19 @@ formId.addEventListener('submit', (e)=>{
     const poursent32 = 32*0.3333; //10.89
 
     if( totalResultRadios1<= poursent16 ){
-        url = `<a href="https://www.plombelecdistribution.com/collections/cable-et-fil/products/gaine-electrique-galvanisee-icta-dp-gris-tag-16-100-courant-10041140">Voir les produits</a>`
+        url = `<a href="https://www.plombelecdistribution.com/collections/cable-et-fil/products/gaine-electrique-galvanisee-icta-dp-gris-tag-16-100-courant-10041140">Découvrez nos produits correspondant</a>`
         gaines = '16';
     }
     else if ( totalResultRadios1 <= poursent20 ){
-        url = `<a href="https://www.plombelecdistribution.com/collections/cable-et-fil/products/gaine-electrique-galvanisee-icta-dp-gris-tag-20-100-courant-10041540">Voir les produits</a>`
+        url = `<a href="https://www.plombelecdistribution.com/collections/cable-et-fil/products/gaine-electrique-galvanisee-icta-dp-gris-tag-20-100-courant-10041540">Découvrez nos produits correspondant</a>`
         gaines = '20';
     }
     else if ( totalResultRadios1 <= poursent25 ){
-        url = `<a href="https://www.plombelecdistribution.com/collections/cable-et-fil/products/gaine-electrique-galvanisee-icta-dp-gris-tag-25-100-courant-10041940">Voir les produits</a>`
+        url = `<a href="https://www.plombelecdistribution.com/collections/cable-et-fil/products/gaine-electrique-galvanisee-icta-dp-gris-tag-25-100-courant-10041940">Découvrez nos produits correspondant</a>`
         gaines = '25';
     }
     else if ( totalResultRadios1 <= poursent32 ){
-        url = `<a class="link" href="https://www.plombelecdistribution.com/collections/cable-et-fil/products/gaine-electrique-galvanisee-icta-sp-gris-tag-32-50-courant-10042724">Voir les produits</a>`
+        url = `<a class="link" href="https://www.plombelecdistribution.com/collections/cable-et-fil/products/gaine-electrique-galvanisee-icta-sp-gris-tag-32-50-courant-10042724">Découvrez nos produits correspondant</a>`
         gaines = '32';
     }
 
@@ -88,19 +88,19 @@ formId.addEventListener('submit', (e)=>{
     if(radioCombiner.checked){
         let totalResult = totalResultRadios1 + totalResultRadios2;
         if( totalResult <= poursent16 ){
-            url = `<a href="https://www.plombelecdistribution.com/collections/cable-et-fil/products/gaine-electrique-galvanisee-icta-dp-gris-tag-16-100-courant-10041140">Voir les produits</a>`
+            url = `<a href="https://www.plombelecdistribution.com/collections/cable-et-fil/products/gaine-electrique-galvanisee-icta-dp-gris-tag-16-100-courant-10041140">Découvrez nos produits correspondant</a>`
             gaines = '16';
         }
         else if ( totalResult <= poursent20 ){
-            url = `<a href="https://www.plombelecdistribution.com/collections/cable-et-fil/products/gaine-electrique-galvanisee-icta-dp-gris-tag-20-100-courant-10041540">Voir les produits</a>`
+            url = `<a href="https://www.plombelecdistribution.com/collections/cable-et-fil/products/gaine-electrique-galvanisee-icta-dp-gris-tag-20-100-courant-10041540">Découvrez nos produits correspondant</a>`
             gaines = '20';
         }
         else if ( totalResult <= poursent25 ){
-            url = `<a href="https://www.plombelecdistribution.com/collections/cable-et-fil/products/gaine-electrique-galvanisee-icta-dp-gris-tag-25-100-courant-10041940">Voir les produits</a>`
+            url = `<a href="https://www.plombelecdistribution.com/collections/cable-et-fil/products/gaine-electrique-galvanisee-icta-dp-gris-tag-25-100-courant-10041940">Découvrez nos produits correspondant</a>`
             gaines = '25';
         }
         else if ( totalResult <= poursent32 ){
-            url = `<a class="link" href="https://www.plombelecdistribution.com/collections/cable-et-fil/products/gaine-electrique-galvanisee-icta-sp-gris-tag-32-50-courant-10042724">Voir les produits</a>`
+            url = `<a class="link" href="https://www.plombelecdistribution.com/collections/cable-et-fil/products/gaine-electrique-galvanisee-icta-sp-gris-tag-32-50-courant-10042724">Découvrez nos produits correspondant</a>`
             gaines = '32';
         }
         else{
@@ -109,15 +109,15 @@ formId.addEventListener('submit', (e)=>{
         }
     }
 
-    
+
     divResult.innerHTML =
     `
         <div class="containDescript">
-            <p>Il vous faut une gaine de diamètre <span class="resultInner">${gaines}</span></p>
+            <p>Il vous faut une gaine de diamètre <span class="resultInner">${gaines} mm</span></p>
             <p class="containrerLink">
                 ${url}
             </p>
-        </div>    
+        </div>
     `
 });
 
@@ -127,7 +127,7 @@ const containter = document.getElementById('containter_combin');
 
 radioCombiner.addEventListener('change', (e)=>{
     e.preventDefault();
-    
+
     if(radioCombiner.checked){
         containter.style.display = "block";
         divResult.innerHTML = "";

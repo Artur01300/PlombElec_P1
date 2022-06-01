@@ -1,0 +1,9 @@
+/*
+    Pour radioCombiner:
+    Par défaut la contenu est desactivé
+*/
+
+#containter_combin{
+    display: none;
+    clear: both;
+}

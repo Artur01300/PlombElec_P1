@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../styleAll.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="description" content="Calculateur des fils éléctrique pour des gaines éléctriques, Plomb'elec">
+    <title>Calculer le diamètre de la gaine électrique à choisir</title>
+</head>
+<body>
+<a href="../index.html" class="back">&larr; Retour</a>
+
+        <form id="formId">
+            <h1>Calculer le diamètre de la gaine électrique à choisir</h1>
+
+            <h2>Fils</h2>
+                <input type="radio" name="fils" id="fils1" value="1" checked>
+                <label class="fils1" for="fils1">1 fil</label>
+                <br />
+                <input type="radio" name="fils" id="fils2" value="2">
+                <label class="fils2" for="fils2">2 fils</label>
+                <br />
+                <input type="radio" name="fils" id="fils3" value="3">
+                <label class="fils3" for="fils3">3 fils</label>
+                <br />
+                <input type="radio" name="fils" id="fils4" value="4">
+                <label class="fils4" for="fils4">4 fils</label>
+                <br />
+                <input type="radio" name="fils" id="fils5" value="5">
+                <label class="fils5" for="fils5">5 fils</label>
+
+            <h2>Sections</h2>
+                <input type="radio" name="radioSections" id="1-5mm" value="1.38" checked>
+                <label class="1-5mm" for="1-5mm">1,5 mm²</label>
+                <br />
+                <input type="radio" name="radioSections" id="2-5mm" value="1.78">
+                <label class="2-5mm" for="2-5mm">2,5 mm²</label>
+
+            <br /><br />
+
+            <input type="checkbox" name="combiner" id="combiner" value="option7">
+            <label for="combiner">Ajouter</label>
+
+            <br />
+
+            <div id="containter_combin">
+
+            <h2>Fils</h2>
+                <input type="radio" name="combinFils" id="fils1-combin" value="1" checked>
+                <label class="fils1-combin" for="fils1-combin">1 fil</label>
+                <br />
+                <input type="radio" name="combinFils" id="fils2-combin" value="2">
+                <label class="fils2-combin" for="fils2-combin">2 fils</label>
+                <br />
+                <input type="radio" name="combinFils" id="fils3-combin" value="3">
+                <label class="fils3-combin" for="fils3-combin">3 fils</label>
+                <br />
+                <input type="radio" name="combinFils" id="fils4-combin" value="4">
+                <label class="fils4-combin" for="fils4-combin">4 fils</label>
+                <br />
+                <input type="radio" name="combinFils" id="fils5-combin" value="5">
+                <label class="fils5-combin" for="fils5-combin">5 fils</label>
+
+            <h2>Sections</h2>
+
+                <input type="radio" name="combinRadioSections" id="1-5mm-combin" value="1.38" checked>
+                <label class="1-5mm-combin" for="1-5mm-combin">1,5 mm²</label>
+                <br />
+
+                <input type="radio" name="combinRadioSections" id="2-5mm-combin" value="1.78">
+                <label class="2-5mm-combin" for="2-5mm-combin">2,5 mm²</label>
+            </div>
+
+            <br />
+
+            <div class="submitAndCombin">
+                <button type="submit" class="validate">Calculer</button>
+            </div>
+
+            <div id="result"></div>
+        </form>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

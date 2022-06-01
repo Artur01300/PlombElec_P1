@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../styleAll.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="description" content="Calculateur de pompe à chaleur pour votre pisine, Plomb'elec">
+    <title>Dimensionner la pompe à chaleur de ma piscine</title>
+</head>
+<body>
+<a href="../index.html" class="back">&larr; Retour</a>
+
+        <form id="formId">
+            <h1>Dimensionner la pompe à chaleur de ma piscine</h1>
+
+            <h2>Type de piscine</h2>
+                <input type="radio" name="geographie" value="option1" id="enterree" checked>
+                <label for="enterree">Enterrée</label>
+                <br />
+                <input type="radio" name="geographie" value="option2" id="semi-enterree">
+                <label for="semi-enterree">Semi-enterrée</label>
+                <br />
+                <input type="radio" name="geographie" value="option3" id="hors-sol">
+                <label for="hors-sol">Hors-sol</label>
+
+            <h2>Dimensions piscine (m) <!--(L x l x H)--></h2>
+                <!-- <label for="longueur">Longueur</label> -->
+                <input type="number" id="longueur" placeholder="L" required value="" min="1">
+                <!-- <br /> -->
+                <!-- <label for="largeur">Largeur</label> -->
+                <input type="number" id="largeur" placeholder="l" required value="" min="1">
+                <!-- <br /> -->
+                <!-- <label for="hauteur">Hauteur</label> -->
+                <input type="number" id="hauteur" placeholder="H" required value="" min="1">
+
+            <h2>Zone géographique</h2>
+                <select id="selectOpts">
+                    <option>Sud de la France</option>
+                    <option>Centre de la France</option>
+                    <option>Nord de la France</option>
+                </select>
+
+                <input type="checkbox" name="geographie" id="alditude" value="option6">
+                <label for="alditude">En altitude (1 000 m ou plus)</label>
+
+            <br /><br />
+
+            <button type="submit" class="validate">Calculer</button>
+
+            <div id="result"></div>
+        </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
